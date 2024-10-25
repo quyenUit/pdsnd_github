@@ -175,6 +175,12 @@ def display_raw_data(df):
         else:
             break
 
+# def calculate_average(data):
+#     """Calculate the average of a list of numbers."""
+#     if not data:  # Kiểm tra danh sách có rỗng không
+#         return 0
+#     return sum(data) / len(data)
+
 def main():
     while True:
         city, month, day = get_filters()

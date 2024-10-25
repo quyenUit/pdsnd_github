@@ -27,3 +27,7 @@ This project analyzes bikeshare data from three major cities: Washington, New Yo
 ### New Updates:
 - Improved documentation for better understanding.
 - Added line comments and docstrings in bikeshare analysis script.
+
+## Recent Updates
+- Refactored the function for calculating averages to improve readability and add error handling.
+- Optimized loops using list comprehensions for better performance.
