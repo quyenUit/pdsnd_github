@@ -174,6 +174,22 @@ def display_raw_data(df):
             i += 5
         else:
             break
+def trip_duration_stats(df):
+    """Displays statistics on the total and average trip duration."""
+
+    print('\nCalculating Trip Duration.\n')
+    start_time = time.time()
+
+    # TO DO: display total travel time
+    total_duration = df['Trip Duration'].sum() / 3600
+    print(f"Total travel time: {total_duration:.2f} hours")
+
+    # TO DO: display mean travel time
+    mean_duration = df['Trip Duration'].mean() / 60
+    print(f"Average trip duration: {mean_duration:.2f} minutes")
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
 
 def main():
     while True:

@@ -31,3 +31,7 @@ This project analyzes bikeshare data from three major cities: Washington, New Yo
 ## Recent Updates
 - Refactored the function for calculating averages to improve readability and add error handling.
 - Optimized loops using list comprehensions for better performance.
+
+## add trip_duration_stats function
+Displays total travel time in hours and the average trip duration in minutes.
+The travel times are calculated by summing and averaging the 'Trip Duration' column, which is assumed to be in seconds.
