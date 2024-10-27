@@ -181,6 +181,48 @@ def display_raw_data(df):
 #         return 0
 #     return sum(data) / len(data)
 
+def user_stats(df, city):
+    """Displays statistics on bikeshare users."""
+
+    print('\nCalculating User Stats.\n')
+    start_time = time.time()
+
+    # TO DO: Display counts of user types
+    user_types = df['User Type'].value_counts()
+    print(user_types)
+
+    # TO DO: Display counts of gender
+    if city != 'washington':
+        gender_counts = df['Gender'].value_counts()
+        print("\nGender Breakdown:")
+        print(gender_counts)
+
+        earliest_birth_year = df['Birth Year'].min()
+        latest_birth_year = df['Birth Year'].max()
+        most_common_birth_year = df['Birth Year'].mode()[0]
+
+        print("\nBirth Year Stats:")
+        print(f"Earliest birth year: {earliest_birth_year}")
+        print(f"Most recent birth year: {latest_birth_year}")
+        print(f"Most common birth year: {most_common_birth_year}")
+    else:
+        print("No gender or birth year data for Washington.")
+
+    # TO DO: Display earliest, most recent, and most common year of birth
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+def display_raw_data(df):
+    """Allows users to view raw data 10 rows at a time."""
+    i = 0
+    while True:
+        view_data = input("Would you like to see 5 rows of raw data? Enter yes or no: ").lower()
+        if view_data == 'yes':
+            print(df.iloc[i:i+5])
+            i += 5
+        else:
+            break
+        
 def main():
     while True:
         city, month, day = get_filters()

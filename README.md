@@ -31,3 +31,12 @@ This project analyzes bikeshare data from three major cities: Washington, New Yo
 ## Recent Updates
 - Refactored the function for calculating averages to improve readability and add error handling.
 - Optimized loops using list comprehensions for better performance.
+
+## add user_stats function 
+Displays counts of different user types, such as Subscribers or Customers.
+For cities other than Washington, it shows the gender distribution and birth year statistics:
+The earliest, most recent, and most common birth years are calculated.
+Washington data does not contain gender or birth year information, so it’s skipped for this city.
+
+## add display_raw_data function
+This function allows users to view the raw data 10 rows at a time by repeatedly asking if they want to see more data.
